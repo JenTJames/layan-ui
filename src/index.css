@@ -1,0 +1,56 @@
+* {
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --danger: #ef4444;
+  --danger-transparent: #ef444438;
+  --danger-opaque: #ef444450;
+
+  --safe: #22c55e;
+  --safe-transparent: #22c55e38;
+  --safe-opaque: #22c55e50;
+
+  --warning: #eab308;
+  --warning-transparent: #eab30838;
+  --warning-opaque: #eab30850;
+
+  --info: #3b82f6;
+  --info-transparent: #3b82f638;
+  --info-opaque: #3b82f650;
+
+  --slate: #64748b;
+  --slate-transparent: #64748b38;
+  --slate-opaque: #64748b50;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
