@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
+import { IoHeartOutline } from "react-icons/io5";
+
 import Button from "./components/Button/Button";
 
 function App() {
@@ -9,10 +11,12 @@ function App() {
   return (
     <div className="test-area">
       <Button
-        variant="text"
-        color="info"
+        fit="compact"
+        variant="soft"
+        color="danger"
         pill={true}
         onClick={() => setCount((count) => count + 1)}
+        startIcon={<IoHeartOutline size={25} />}
       >
         Count is {count}
       </Button>

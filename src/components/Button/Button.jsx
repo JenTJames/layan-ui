@@ -1,6 +1,10 @@
 import { styled } from "styled-components";
 
 const StyledButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   cursor: pointer;
   font-weight: 600;
   border-radius: ${({ pill }) => (pill ? "30px" : "7px")};
@@ -17,7 +21,12 @@ const StyledButton = styled.button`
       ? "var(--" + color + "-transparent)"
       : "transparent"};
   width: ${({ block }) => (block ? "100%" : "auto")};
-  padding: ${({ variant }) => (variant === "text" ? "1rem 2rem" : "1rem 5rem")};
+  padding: ${({ fit }) =>
+    fit === "normal"
+      ? "1rem 1.7rem"
+      : fit === "relaxed"
+      ? "1.5rem 5rem"
+      : "0.7rem 1rem"};
 
   &:hover {
     background-color: ${({ variant, color }) =>
@@ -36,6 +45,9 @@ const Button = ({
   color = "safe",
   block = false,
   pill = false,
+  fit = "normal",
+  startIcon,
+  endIcon,
 }) => {
   return (
     <StyledButton
@@ -44,8 +56,11 @@ const Button = ({
       block={block}
       pill={pill}
       onClick={onClick}
+      fit={fit}
     >
+      {startIcon && startIcon}
       {children}
+      {endIcon && endIcon}
     </StyledButton>
   );
 };
