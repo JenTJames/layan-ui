@@ -1,13 +1,11 @@
 import "./App.css";
-
-import Text from "./components/Text/Text";
+import Input from "./components/Input/Input";
+import { IoMail } from "react-icons/io5";
 
 function App() {
   return (
     <div className="test-area">
-      <Text type="h1" color="info">
-        Heading...
-      </Text>
+      <Input variant="underlined" color="danger" endOrnament={<IoMail />} />
     </div>
   );
 }
